@@ -5,5 +5,6 @@ class CreateOrders < ActiveRecord::Migration[5.1]
       t.string :order_identifier
       t.timestamps
     end
+    add_index :orders, [:order_identifier], unique: true
   end
 end
