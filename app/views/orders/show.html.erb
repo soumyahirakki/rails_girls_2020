@@ -1,2 +1,12 @@
-<h1>Orders#index #{params[:id]}</h1>
-<p>Find me in app/views/orders/index.html.erb</p>
+<tbody>
+    <% @order.each do |order| %>
+      <tr>
+        <td style="font-size: 50">order id => <%= order.order_identifier%></td>
+
+
+
+
+       
+        <td>order value => <%= order.total_price %></td>
+      </tr>
+    <% end %>
