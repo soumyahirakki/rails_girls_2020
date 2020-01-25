@@ -5,6 +5,12 @@ class OrdersController < ApplicationController
   end
 
   def show
+    puts params[:id]
+
+       @order= Order.where(id: params[:id])
+       puts @order.inspect
+
+
 
   end
 
