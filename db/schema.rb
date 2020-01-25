@@ -23,9 +23,10 @@ ActiveRecord::Schema.define(version: 20200125083446) do
 
   create_table "orders", force: :cascade do |t|
     t.decimal "total_price"
-    t.string "order_id"
+    t.string "order_identifier"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["order_identifier"], name: "index_orders_on_order_identifier", unique: true
   end
 
   create_table "products", force: :cascade do |t|
